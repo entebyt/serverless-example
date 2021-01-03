@@ -89,6 +89,12 @@ functions:
       - http:
           path: api/forgot-password/{token}
           method: get
+  books:
+    handler: book.books
+    events:
+      - http:
+          path: /books
+          method: get
 
 #         cors: true
 #      - websocket: $connect

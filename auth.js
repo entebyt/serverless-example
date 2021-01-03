@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const mail = require('./mail');
 const {
 	default: { statusCodes, messages }
-} = require('../constants');
+} = require('./constants');
 module.exports.login = async (event, context) => {
 	const db = await dbjs.get();
 
