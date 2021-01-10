@@ -1,7 +1,6 @@
 'use strict';
 const MongoClient = require('mongodb').MongoClient;
-const MONGODB_URI =
-	'mongodb+srv://cmstaginguser:LCAjzpYG1c7G91nH@charitymoments-staging.lq54v.mongodb.net/charitymoment-staging?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGO_URL;
 let dbInstance = null;
 module.exports.get = async function() {
 	if (dbInstance) {

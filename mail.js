@@ -4,14 +4,14 @@ export async function sendMail(mailOpts, callback) {
 	var transport = nodemailer.createTransport({
 		service: 'Gmail',
 		auth: {
-			user: 'divyanshu.chat@gmail.com',
-			pass: 'rchtkelljhtwxgby'
+			user: process.env.GMAIL_USERNAME,
+			pass: process.env.GMAIL_PASS
 		}
 	});
 
 	// Setup mail configuration
 	var mailOptions = {
-		from: 'noreply@charitymoments.com', // sender address
+		from: 'noreply@serverless-example.com', // sender address
 		to: 'email', // list of receivers
 		subject: '', // Subject line
 		html: '',

@@ -126,6 +126,9 @@ module.exports.signup = async (event, context) => {
 	}
 };
 
+// forgot password method if user forgot passwords
+// uses a mail function to send a mail to user email
+// only if user exists otherwise will send an error
 module.exports.forgotpassword = async event => {
 	// user email
 	let email = event.body.email;
@@ -155,6 +158,10 @@ module.exports.forgotpassword = async event => {
 		};
 	}
 };
+
+// used to validate token of user
+// takes the token from the params
+// checks if the token is vaild
 module.exports.validateToken = async event => {
 	const user = await validate(event.pathParameters.token);
 	if (user) {
@@ -179,6 +186,12 @@ module.exports.validateToken = async event => {
 		};
 	}
 };
+
+// validate method is a helper method
+// 1. decodes the token
+// 2. gets the username
+// 3, validates the username by checking in databse
+// 4. returns the user if found otherwise null
 async function validate(token) {
 	const userCollection = db.collection('users');
 	const decodedToken = jwt.decode(token, 'secret_key');
@@ -187,6 +200,9 @@ async function validate(token) {
 	});
 	return user;
 }
+
+// Used to resetpassword of the user
+//
 module.exports.resetpassword = async event => {
 	const password = event.body.password;
 	const user = await validate(event.body.token);

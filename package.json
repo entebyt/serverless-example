@@ -1,22 +1,22 @@
 {
-  "name": "causes-service",
-  "version": "1.0.0",
-  "description": "",
-  "main": "causes.js",
-  "dependencies": {
-    "crypto": "^1.0.1",
-    "inherits": "^2.0.4",
-    "isarray": "^1.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.6.3",
-    "mongoose": "^5.11.8",
-    "serverless-offline": "^6.8.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "serverless-example",
+	"version": "1.0.0",
+	"description": "",
+	"main": "causes.js",
+	"dependencies": {
+		"crypto": "^1.0.1",
+		"inherits": "^2.0.4",
+		"isarray": "^1.0.0",
+		"jsonwebtoken": "^8.5.1",
+		"mongodb": "^3.6.3",
+		"mongoose": "^5.11.8",
+		"serverless-offline": "^6.8.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
 }
